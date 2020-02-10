@@ -1,14 +1,14 @@
 const convertAndTranscribe = require('./index.js').convertAndTranscribe;
 const transcribe = require('./index.js').transcribe;
 
-const filePath = '/Users/passarellip/Library/Application\ Support/digital-paper-edit-electron/media/_-qTH_i99n3R0.wav';
+const filePath = process.argv[2];
 
 // transcribe(filePath)
 //     .then((res) => {
 //     console.log('transcribe', res);
 //     })
 
-const videoFilePath = '/Users/passarellip/Library/Application\ Support/digital-paper-edit-electron/media/_-qTH_i99n3R0.mp4';
+const videoFilePath = process.argv[2];
 convertAndTranscribe(videoFilePath)
     .then((res) => {
     console.log('transcribe', res);
