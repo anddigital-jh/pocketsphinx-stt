@@ -1,6 +1,6 @@
 const pocketsphinx_transcribe = require('./index.js');
 
-const audioFile = '/Users/passap02/seed-demo/audio/TEST.wav';
+const audioFile = process.argv[2];
 
 pocketsphinx_transcribe(audioFile).then((result) => {
   console.log(JSON.stringify(result, null, 2));
